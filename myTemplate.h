@@ -3,6 +3,8 @@
 
 template<class T>
 class Collection {
+
+	
 public:
     T* arr;
     int size;
@@ -20,7 +22,7 @@ public:
     }
 
     // Get element at index
-    T getData(int index) {
+    T getData(int index) const {
         return arr[index];
     }
 
@@ -40,4 +42,6 @@ public:
         arr = newArr;       // Point to new array
         size = 3 * size;    // Update size
     }
+    /*template<class U>
+	friend void displayCollection(const Collection<U>& c);*/
 };
